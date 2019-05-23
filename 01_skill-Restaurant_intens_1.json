@@ -1,0 +1,46 @@
+{
+  "name": "Restaurant",
+  "intents": [
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hello there"
+        },
+        {
+          "text": "ahoy"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "good afternoon"
+        }
+      ],
+      "description": "greeting or welcoming customer for using the bot"
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [],
+  "workspace_id": "dbd493ba-c164-4596-a26a-38769d920d9f",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Training"
+}

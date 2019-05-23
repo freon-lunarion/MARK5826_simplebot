@@ -1,0 +1,206 @@
+{
+  "name": "Restaurant",
+  "intents": [
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hello there"
+        },
+        {
+          "text": "ahoy"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "good afternoon"
+        }
+      ],
+      "description": "greeting or welcoming customer for using the bot"
+    },
+    {
+      "intent": "business_hour",
+      "examples": [
+        {
+          "text": "Can you tell me what time you open"
+        },
+        {
+          "text": "what is your business hour"
+        },
+        {
+          "text": "what's time you are open?"
+        },
+        {
+          "text": "when's you are open?"
+        },
+        {
+          "text": "I’m calling to find out your business hours"
+        }
+      ],
+      "description": "opening time"
+    },
+    {
+      "intent": "booking",
+      "examples": [
+        {
+          "text": "book a table for 4"
+        },
+        {
+          "text": "book  for 5 people for Friday night"
+        },
+        {
+          "text": "book a restaurant at 6 pm"
+        },
+        {
+          "text": "can I make a dining reservation"
+        },
+        {
+          "text": "make reservation at 9 pm for 2 people"
+        },
+        {
+          "text": "I want book for 6 people for tomorrow 4pm"
+        }
+      ],
+      "description": "booking place in restaurant"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-location",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "num_people",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": [
+            "4 people"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "6",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "5",
+          "synonyms": [
+            "5 people"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": [
+            "2 people"
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We are open Sun-Wed from 10am to 8pm and Thur-Sat from 10am until midnight"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#business_hour",
+      "dialog_node": "node_1_1558496749876",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1558496749876"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              },
+              {
+                "text": "Hi, may I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome || #greeting",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "dbd493ba-c164-4596-a26a-38769d920d9f",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}

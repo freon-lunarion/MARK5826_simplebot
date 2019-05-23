@@ -1,0 +1,91 @@
+{
+  "name": "Restaurant",
+  "intents": [
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hello there"
+        },
+        {
+          "text": "ahoy"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "good afternoon"
+        }
+      ],
+      "description": "greeting or welcoming customer for using the bot"
+    },
+    {
+      "intent": "business_hour",
+      "examples": [
+        {
+          "text": "Can you tell me what time you open"
+        },
+        {
+          "text": "what is your business hour"
+        },
+        {
+          "text": "what's time you are open?"
+        },
+        {
+          "text": "when's you are open?"
+        },
+        {
+          "text": "I’m calling to find out your business hours"
+        }
+      ],
+      "description": "opening time"
+    },
+    {
+      "intent": "booking",
+      "examples": [
+        {
+          "text": "book a table for 4"
+        },
+        {
+          "text": "book  for 5 people for Friday night"
+        },
+        {
+          "text": "book  for 5 people for Friday night"
+        },
+        {
+          "text": "can I make a dining reservation"
+        },
+        {
+          "text": "make reservation at 9 pm for 2 people"
+        },
+        {
+          "text": "I want book for 6 people for tomorrow 4pm"
+        }
+      ],
+      "description": "booking place in restaurant"
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [],
+  "workspace_id": "dbd493ba-c164-4596-a26a-38769d920d9f",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}

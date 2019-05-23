@@ -1,0 +1,70 @@
+{
+  "name": "Restaurant",
+  "intents": [
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hello there"
+        },
+        {
+          "text": "ahoy"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "good afternoon"
+        }
+      ],
+      "description": "greeting or welcoming customer for using the bot"
+    },
+    {
+      "intent": "booking",
+      "examples": [
+        {
+          "text": "book  for 5 people for Friday night"
+        },
+        {
+          "text": "book a restaurant at 6 pm"
+        },
+        {
+          "text": "can I make a dining reservation"
+        },
+        {
+          "text": "make reservation at 9 pm for 2 people"
+        },
+        {
+          "text": "I want book for 6 people for tomorrow 4pm"
+        },
+        {
+          "text": "book a table for 4"
+        }
+      ],
+      "description": "booking place in restaurant"
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [],
+  "workspace_id": "dbd493ba-c164-4596-a26a-38769d920d9f",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Training"
+}
